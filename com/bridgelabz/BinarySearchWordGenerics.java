@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class BinarySearchWordGenerics<M extends Comparable<M>> {
     //search method
-   public static<M extends Comparable<M>> Integer binarySearch(String[] array, M userChoice) {
+    public static <M extends Comparable<M>> Integer binarySearch(String[] array, M userChoice) {
         Integer firstIndex = 0, lastIndex = array.length - 1;
         while (firstIndex <= lastIndex) {
             Integer mid = (firstIndex + lastIndex) / 2;      //finding mid element
 
-            Integer result = userChoice.compareTo((M)array[mid]);       //comparing result
+            Integer result = userChoice.compareTo((M) array[mid]);       //comparing result
 
             if (result == 0) {            // Check if userchoice is present at mid
                 return mid;
